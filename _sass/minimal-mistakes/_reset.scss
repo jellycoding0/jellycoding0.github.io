@@ -2,33 +2,30 @@
    STYLE RESETS
    ========================================================================== */
 
-   * { box-sizing: border-box; }
+* { box-sizing: border-box; }
 
-   html {
-     /* apply a natural box layout model to all elements */
-     /* 글씨 크기 조정하기 */
-     box-sizing: border-box;
-     background-color: $background-color;
-     font-size: 15px;
-   
-     /* 본문 사이즈 */
-     @include breakpoint($medium) {
-       font-size: 15px;
-     }
-   
-     /* 헤더 사이즈 */
-     @include breakpoint($large) {
-       font-size: 16px;
-     }
-   
-     /* 제목 사이즈 (이 부분만 조정해도 글씨 사이즈가 조절 됨)*/
-     @include breakpoint($x-large) {
-       font-size: 17.5px;
-     }
-   
-     -webkit-text-size-adjust: 100%; /* 모바일 폰트 사이즈 조정*/
-     -ms-text-size-adjust: 100%;
-   }
+html {
+  /* apply a natural box layout model to all elements */
+  box-sizing: border-box;
+  background-color: $background-color;
+  font-size: $doc-font-size;
+
+  @include breakpoint($medium) {
+    font-size: $doc-font-size-medium;
+  }
+
+  @include breakpoint($large) {
+    font-size: $doc-font-size-large;
+  }
+
+  @include breakpoint($x-large) {
+    font-size: $doc-font-size-x-large;
+  }
+
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
 /* Remove margin */
 
 body { margin: 0; }
@@ -67,8 +64,6 @@ audio,
 canvas,
 video {
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
 }
 
 /* Prevents modern browsers from displaying 'audio' without controls */
@@ -145,7 +140,6 @@ textarea {
 
 button,
 input {
-  *overflow: visible; /* inner spacing ie IE6/7*/
   line-height: normal; /* FF3/4 have !important on line-height in UA stylesheet*/
 }
 
