@@ -8,10 +8,11 @@ html {
   /* apply a natural box layout model to all elements */
   box-sizing: border-box;
   background-color: $background-color;
-  font-size: $doc-font-size;
-
+  font-size: 15px;
+  
+  // 본문 사이즈
   @include breakpoint($medium) {
-    font-size: $doc-font-size-medium;
+    font-size: 15px;
   }
 
   @include breakpoint($large) {
