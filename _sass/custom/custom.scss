@@ -1,0 +1,12 @@
+/* _sass/custom/custom.scss */
+
+.archive__item-title a {
+    text-decoration: none;  /* 링크 밑줄 제거 */
+    color: inherit;         /* 링크 색상 상속 (선택 사항) */
+  }
+  
+  ul {
+    list-style: none;       /* 리스트 불릿 제거 */
+    padding-left: 0;        /* 왼쪽 여백 제거 (선택 사항) */
+  }
+  
