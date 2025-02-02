@@ -121,7 +121,6 @@ footer:
 include:
   - .htaccess
   - _pages
-  - _main.js
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -131,7 +130,7 @@ exclude:
   - .jekyll-assets-cache
   - .sass-cache
   - assets/js/plugins
-  # - assets/js/_main.js
+  - assets/js/_main.js
   - assets/js/vendor
   - Capfile
   - CHANGELOG
