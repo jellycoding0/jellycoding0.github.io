@@ -4,17 +4,22 @@ layout: archive
 
 {{ content }}
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
-{% if paginator %}
-  {% assign posts = paginator.posts %}
-{% else %}
-  {% assign posts = site.posts %}
-{% endif %}
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% include documents-collection.html entries=posts type=entries_layout %}
-</div>
 
-{% include paginator.html %}
+<h2>📂 카테고리</h2>
+<ul class="category-list">
+  {% for category in site.categories %}  <!-- 모든 카테고리를 반복 처리 -->
+    <li class="category-item">
+      <!-- 카테고리 제목 및 포스트 개수 표시 -->
+      <span class="category-toggle">{{ category[0] }} <span class="count">({{ category[1] | size }})</span></span>
+
+      <!-- 해당 카테고리의 포스트 목록 -->
+      <ul class="post-list">
+        {% for post in category[1] %}  <!-- 해당 카테고리의 포스트를 반복 처리 -->
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>  <!-- 포스트 링크 및 제목 표시 -->
+        {% endfor %}
+      </ul>
+    </li>
+  {% endfor %}
+</ul>

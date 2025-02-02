@@ -1,5 +1,5 @@
 ---
-title: "category_page(archive)"
+title: "카테고리 List"
 layout: categories
 permalink: /categories/
 author_profile: true

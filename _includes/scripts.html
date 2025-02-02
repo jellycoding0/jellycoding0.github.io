@@ -1,11 +1,24 @@
+<!-- ✅ 1️⃣ jQuery 로드 (Google CDN) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- ✅ 2️⃣ 필수 플러그인 로드 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.2.0/jquery.fitvids.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.polyfills.min.js"></script>
+
+<!-- ✅ 3️⃣ Magnific Popup 플러그인 로드 (CDN 추가) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+<!-- ✅ 4️⃣ main.js 로드 -->
 {% if site.footer_scripts %}
   {% for script in site.footer_scripts %}
     <script src="{{ script | relative_url }}"></script>
   {% endfor %}
 {% else %}
-  <script src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 {% endif %}
 
+<!-- ✅ 5️⃣ 검색 기능 스크립트 로드 -->
 {% if site.search == true or page.layout == "search" %}
   {%- assign search_provider = site.search_provider | default: "lunr" -%}
   {%- case search_provider -%}
@@ -18,9 +31,11 @@
   {%- endcase -%}
 {% endif %}
 
+<!-- ✅ 6️⃣ 분석 및 댓글 스크립트 로드 -->
 {% include analytics.html %}
 {% include /comments-providers/scripts.html %}
 
+<!-- ✅ 7️⃣ 추가 스크립트 로드 (옵션) -->
 {% if site.after_footer_scripts %}
   {% for script in site.after_footer_scripts %}
     <script src="{{ script | relative_url }}"></script>

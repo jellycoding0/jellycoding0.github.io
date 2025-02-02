@@ -431,3 +431,83 @@
 }
 
 
+
+/* 📋 포스트 목록 기본 설정 */
+.post-list {
+  display: none;                        /* 기본적으로 숨김 */
+  padding-left: 20px;                  /* 왼쪽 여백 */
+  margin-top: 8px;                     /* 위쪽 여백 */
+  transition: max-height 0.4s ease;    /* 부드러운 슬라이드 효과 */
+  max-height: 0;                       /* 숨길 때 높이 0 */
+  overflow: hidden;                    /* 넘치는 콘텐츠 숨김 */
+}
+
+/* ✅ 카테고리 항목 스타일 */
+.category-item {
+  list-style: none;        /* 카테고리 목록의 점 제거 */
+  margin-bottom: 3px;      /* 카테고리 간 간격 */
+}
+
+/* 📌 포스트 목록 스타일 */
+.post-list li {
+  list-style: none;                   /* 포스트 항목의 동그라미 제거 */
+  padding-left: 0;                    /* 들여쓰기 제거 */
+}
+
+/* ✅ 토글 시 포스트 목록 표시 */
+.post-list.visible {
+  display: block;                      /* 보이도록 설정 */
+  max-height: 1000px;                  /* 충분한 높이로 확장 */
+}
+
+/* 🗂️ 카테고리 제목 스타일 */
+.category-toggle {
+  cursor: pointer;                     /* 클릭 가능 표시 */
+  font-weight: bold;                   /* 텍스트 두껍게 */
+  background-color: #eef6fd;           /* GPT 느낌의 연한 블루 */
+  padding: 8px 12px;                   /* 안쪽 여백 */
+  border-radius: 8px;                  /* 부드러운 모서리 */
+  transition: background-color 0.3s, transform 0.3s;  /* 배경과 애니메이션 효과 */
+  display: flex;                       /* 아이콘과 텍스트 정렬 */
+  align-items: center;                 /* 수직 중앙 정렬 */
+  gap: 10px;                           /* 아이콘과 텍스트 사이 여백 */
+  font-size: 16px;                     /* 폰트 크기 조정 */
+  color: #333;                         /* 글자 색상 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 은은한 그림자 효과 */
+}
+
+/* 🔄 토글 아이콘 스타일 */
+.category-toggle::before {
+  content: "▶";                        /* 화살표 아이콘 */
+  font-size: 12px;                     /* 아이콘 크기 */
+  transition: transform 0.3s ease;     /* 회전 애니메이션 */
+  color: #007acc;                      /* GPT 블루 컬러 */
+}
+
+/* 🔽 토글이 활성화되면 아이콘 회전 */
+.category-item.active .category-toggle::before {
+  transform: rotate(90deg);            /* 오른쪽 화살표를 아래로 회전 */
+}
+
+/* ✨ 마우스 오버 시 효과 */
+.category-toggle:hover {
+  background-color: #d4eaff;           /* 더 밝은 블루로 전환 */
+  transform: scale(1.03);              /* 약간 확대 효과 */
+}
+
+/* 📌 포스트 링크 스타일 */
+.post-list li a {
+  text-decoration: none;               /* 밑줄 제거 */
+  color: #1d2035;                         /* 글자 색상 */
+  transition: color 0.3s ease;         /* 부드러운 색상 변화 */
+  font-size: 15px;                     /* 폰트 크기 */
+  display: block;                      /* 클릭 가능한 영역 확장 */
+  padding: 2px 0;                      /* 링크 간 간격 */
+  padding-left: 15px;                 /* 들여쓰기 */
+}
+
+/* 🌟 포스트 링크 호버 효과 */
+.post-list li a:hover {
+  color: #007acc;                      /* GPT 블루 색상으로 변경 */
+  text-decoration: underline;          /* 밑줄 추가 */
+}

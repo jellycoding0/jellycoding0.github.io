@@ -232,3 +232,18 @@ $(document).ready(function () {
       });
   }
 });
+
+
+
+console.log("✅ JavaScript Loaded Successfully!"); // 첫 번째 테스트 로그
+
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("✅ DOM Loaded"); // DOM 로드 후 로그
+
+  document.querySelectorAll('.category-toggle').forEach(toggle => {
+    toggle.addEventListener('click', function () {
+      console.log("✅ Category Clicked!"); // 클릭 시 로그
+      this.parentElement.classList.toggle('active');
+    });
+  });
+});

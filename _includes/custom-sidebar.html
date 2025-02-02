@@ -1,0 +1,17 @@
+<div class="sidebar">
+  <h3>📂 카테고리</h3>
+  <ul class="category-list">
+    {% for category in site.categories %}
+      <li class="category-item">
+        <span class="category-toggle">
+          {{ category[0] }} <span class="count">{{ category[1] | size }}</span>
+        </span>
+        <ul class="post-list">
+          {% for post in category[1] %}
+            <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
