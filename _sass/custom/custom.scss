@@ -1,12 +1,18 @@
-/* _sass/custom/custom.scss */
-
+/* 링크 밑줄 제거 */
 .archive__item-title a {
-    text-decoration: none;  /* 링크 밑줄 제거 */
-    color: inherit;         /* 링크 색상 상속 (선택 사항) */
+    text-decoration: none !important;  /* !important로 우선순위 높임 */
+    color: inherit !important;         /* 색상 상속 (선택 사항) */
   }
   
-  ul {
-    list-style: none;       /* 리스트 불릿 제거 */
-    padding-left: 0;        /* 왼쪽 여백 제거 (선택 사항) */
+  /* 리스트 불릿 및 왼쪽 여백 제거 */
+  ul, ol {
+    list-style: none !important;       /* !important로 강제 적용 */
+    padding-left: 0 !important;        /* 왼쪽 여백 제거 */
+    margin-left: 0 !important;         /* 추가 여백 제거 */
+  }
+  
+  /* 개별 항목 간 간격 조절 (선택 사항) */
+  li {
+    margin-bottom: 5px; /* 필요에 따라 조절 */
   }
   
