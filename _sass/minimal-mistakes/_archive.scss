@@ -433,24 +433,24 @@
 
 /* 목록 앞의 점 제거 */
 ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 /* 리스트 스타일 */
 ul li {
-  font-size: 16px;
-  margin-bottom: 5px;
+  font-size: 16px !important;
+  margin-bottom: 5px !important;
 }
 
 /* 링크의 밑줄 제거 */
 ul li a {
-  text-decoration: none;
-  color: inherit; /* 기본 색상 유지 */
+  text-decoration: none !important;
+  color: inherit !important; /* 기본 색상 유지 */
 }
 
 /* 링크에 마우스를 올렸을 때 스타일 */
 ul li a:hover {
-  text-decoration: underline; /* 원하는 경우 마우스를 올릴 때만 밑줄 표시 */
+  text-decoration: underline !important; /* 원하는 경우 마우스를 올릴 때만 밑줄 표시 */
 }
