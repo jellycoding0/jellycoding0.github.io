@@ -431,16 +431,36 @@
 }
 
 
-/* 목록 앞의 점 제거 */
-ul {
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
+// /* 목록 앞의 점 제거 */
+// ul {
+//   list-style: none !important;
+//   padding: 0 !important;
+//   margin: 0 !important;
+// }
 
 
-/* 마커 완전 제거 */
-li::marker {
-  content: none !important;    /* 마커 콘텐츠 제거 */
-  display: none !important;    /* 마커 자체 숨기기 */
-}
+// /* 마커 완전 제거 */
+// li::marker {
+//   content: none !important;    /* 마커 콘텐츠 제거 */
+//   display: none !important;    /* 마커 자체 숨기기 */
+// }
+
+// /* 리스트 스타일 초기화 */
+// ul, ol, li {
+//   list-style: none !important;   /* 리스트 스타일 제거 */
+//   margin: 0 !important;          /* 마진 제거 */
+//   padding: 0 !important;         /* 패딩 제거 */
+// }
+
+// /* Flexbox로 마커 비활성화 */
+// li {
+//   display: flex !important;      /* Flexbox로 강제 적용하여 마커 비활성화 */
+//   align-items: center;           /* 수직 정렬 */
+// }
+
+// /* 링크 밑줄 제거 */
+// a {
+//   text-decoration: none !important;
+//   color: inherit !important;
+// }
+  
