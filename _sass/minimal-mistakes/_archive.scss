@@ -438,19 +438,9 @@ ul {
   margin: 0 !important;
 }
 
-// /* 리스트 스타일 */
-// ul li {
-//   font-size: 16px !important;
-//   margin-bottom: 5px !important;
-// }
 
-/* 링크의 밑줄 제거 */
-ul li a {
-  text-decoration: none !important;
-  color: inherit !important; /* 기본 색상 유지 */
-}
-
-/* 링크에 마우스를 올렸을 때 스타일 */
-ul li a:hover {
-  text-decoration: underline !important; /* 원하는 경우 마우스를 올릴 때만 밑줄 표시 */
+/* 마커 완전 제거 */
+li::marker {
+  content: none !important;    /* 마커 콘텐츠 제거 */
+  display: none !important;    /* 마커 자체 숨기기 */
 }
