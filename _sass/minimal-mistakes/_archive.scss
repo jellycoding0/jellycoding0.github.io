@@ -430,10 +430,10 @@
 	}
 }
 
-//추가가
+/* 점 제거 */
 ul {
   list-style: none; /* 기본 점 제거 */
-  padding: 0;
+  padding: 0; /* 기본 패딩 제거 */
 }
 
 ul li {
