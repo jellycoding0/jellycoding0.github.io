@@ -103,7 +103,7 @@ author:
   name             : "JellyCoding"
   avatar           : "/img/Jelly_Logo.png"
   bio              : "로봇과 코딩은 젤리코딩"
-  location         : "Somewhere in Korea"
+  # location         : "Somewhere in Korea"
   email            :
   links:
     - label: "YouTube"
