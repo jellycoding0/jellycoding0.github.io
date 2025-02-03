@@ -1,8 +1,8 @@
 ---
-title: "[GitBlog] m-mistake의 구조 요약"
+title: "[Blog] Jekyll 기반 블로그 테마(minimal-mistake) 구조 요약"
 
 categories:
-  - GitBlog
+  - Git
 
 ---
 

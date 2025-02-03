@@ -1,8 +1,8 @@
 ---
-title: "[GitBlog] 카테고리 토글로 포스트 목록 표시하기"
+title: "[Blog] 카테고리 토글로 포스트 목록 표시하기"
 
 categories:
-  - GitBlog
+  - Git
 
 ---
 
